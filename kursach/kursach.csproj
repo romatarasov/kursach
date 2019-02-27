@@ -51,6 +51,12 @@
     <Compile Include="Forms\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,24 @@
     <Compile Include="UserControls\AdminControlUC.Designer.cs">
       <DependentUpon>AdminControlUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\MyCars.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MyCars.Designer.cs">
+      <DependentUpon>MyCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MyProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MyProfile.Designer.cs">
+      <DependentUpon>MyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OnParking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\OnParking.Designer.cs">
+      <DependentUpon>OnParking.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserLoginUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -73,6 +97,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -88,6 +115,15 @@
     </Compile>
     <EmbeddedResource Include="UserControls\AdminControlUC.resx">
       <DependentUpon>AdminControlUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MyCars.resx">
+      <DependentUpon>MyCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MyProfile.resx">
+      <DependentUpon>MyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\OnParking.resx">
+      <DependentUpon>OnParking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserLoginUC.resx">
       <DependentUpon>UserLoginUC.cs</DependentUpon>
