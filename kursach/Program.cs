@@ -1,4 +1,5 @@
-﻿using System;
+﻿using kursach.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,8 +16,10 @@ namespace kursach
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.SetCompatibleTextRenderingDefault(false);           
+            LoginController MainController = new LoginController(new MainForm());
+            Application.Run(MainController.CurrentForm);
         }
     }
+    
 }

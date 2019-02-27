@@ -14,6 +14,12 @@ namespace databaseservice.Repositories
         T GetModel(string sql);
         List<T> GetList(string sql);
          DataSet GetDataSet(string sql);
+        void Insert(T Model);
+        void Edit(T Model);
+        void Remove(T Model);
+        
+        
+
 
 
     }

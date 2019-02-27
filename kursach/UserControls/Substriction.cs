@@ -7,21 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using parkingmodels;
 
 namespace kursach.UserControls
 {
-    public partial class MyCars : UserControl
+    public partial class Substriction : UserControl
     {
-        
-        public MyCars()
+        public Substriction()
         {
             InitializeComponent();
-        }
-
-        public void SetDataSource(List <Cars> Cars)
-        {
-            this.dataGridView1.DataSource = Cars;
         }
     }
 }

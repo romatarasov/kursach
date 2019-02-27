@@ -33,8 +33,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Администратор";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -74,6 +75,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Пользователь ";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -104,6 +106,19 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(493, 418);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(3, 368);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(487, 45);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Войти";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -119,18 +134,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(487, 40);
             this.tableLayoutPanel2.TabIndex = 7;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(3, 368);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(487, 45);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Войти";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 

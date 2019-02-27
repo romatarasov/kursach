@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MyCarsController.cs" />
+    <Compile Include="Controllers\MyProfileController.cs" />
+    <Compile Include="Controllers\OnParkingController.cs" />
+    <Compile Include="Controllers\UserFormController.cs" />
     <Compile Include="Forms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     <Compile Include="UserControls\OnParking.Designer.cs">
       <DependentUpon>OnParking.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Substriction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Substriction.Designer.cs">
+      <DependentUpon>Substriction.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserLoginUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +137,9 @@
     <EmbeddedResource Include="UserControls\OnParking.resx">
       <DependentUpon>OnParking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Substriction.resx">
+      <DependentUpon>Substriction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserLoginUC.resx">
       <DependentUpon>UserLoginUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +156,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\databaseservice\databaseservice.csproj">
+      <Project>{2FB55909-DFA1-4A12-BF79-733E6F02376A}</Project>
+      <Name>databaseservice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\parkingmodels\parkingmodels.csproj">
+      <Project>{8C21BD68-4FCC-46C7-95E7-06EC089FF401}</Project>
+      <Name>parkingmodels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

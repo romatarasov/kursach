@@ -10,32 +10,32 @@ namespace databaseservice
     public class DataBase
     {
         SqlConnection connection;
-        public DataBase ()
+        public DataBase()
         {
             this.connection = new SqlConnection(Parking.Default.Connection);
 
 
         }
-      /// <summary>
-      /// Получение модели из базы данных
-      /// </summary>
-      /// <typeparam name="T"></typeparam>
-      /// <param name="sql"></param>
-      /// <returns></returns>
-        public T GetModel<T>(string sql) where T:class,new ()
+        /// <summary>
+        /// Получение модели из базы данных
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sql"></param>
+        /// <returns></returns>
+        public T GetModel<T>(string sql) where T : class, new()
         {
             OpenConnection();
             T Model = new T();
             SqlCommand sqlCommand = new SqlCommand(sql, connection);
-            
+
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
             if (sqlDataReader.HasRows)
             {
                 //записываем
-                for (int i=0;i<Model.GetType().GetProperties().Length;i++)
+                for (int i = 0; i < Model.GetType().GetProperties().Length; i++)
                 {
                     Model.GetType().GetProperties()[i].SetValue(Model, sqlDataReader.GetValue(i));
-                    
+
                 }
                 sqlDataReader.Close();
                 return Model;
@@ -64,8 +64,8 @@ namespace databaseservice
                     }
                     ModelList.Add(Model);
                 }
-               
-               
+
+
                 sqlDataReader.Close();
                 CloseConnection();
                 return ModelList;
@@ -75,11 +75,12 @@ namespace databaseservice
         }
         private void OpenConnection()
         {
-            try {
+            try
+            {
                 this.connection.Open();
-                    }
-           
-                catch(Exception e)
+            }
+
+            catch (Exception e)
             {
                 Debug.WriteLine(e.Message);
             }
@@ -111,11 +112,12 @@ namespace databaseservice
         /// вставка удаление сохранение
         /// </summary>
         /// <param name="sql"></param>
-        public void ExecuteQuary (string sql)
+        public void ExecuteQuary(string sql)
         {
-            SqlCommand sqlCommand = new SqlCommand(sql,connection);
+            SqlCommand sqlCommand = new SqlCommand(sql, connection);
             sqlCommand.ExecuteNonQuery();
 
         }
 
+    }
 }
