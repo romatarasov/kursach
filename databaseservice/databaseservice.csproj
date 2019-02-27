@@ -41,12 +41,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DataBase.cs" />
+    <Compile Include="DataBaseSinglton.cs" />
     <Compile Include="Parking.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Parking.settings</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CarsBrandRepository.cs" />
+    <Compile Include="Repositories\CarsModelRepository.cs" />
+    <Compile Include="Repositories\CarsOwnerRepository.cs" />
+    <Compile Include="Repositories\CarsRepository.cs" />
+    <Compile Include="Repositories\DrivingLicenseRepository.cs" />
+    <Compile Include="Repositories\IParkingModel.cs" />
+    <Compile Include="Repositories\NumberPhoneRepositoty.cs" />
+    <Compile Include="Repositories\PaymentRepository.cs" />
+    <Compile Include="Repositories\SubscriptionRepository.cs" />
+    <Compile Include="Repositories\TariffRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -54,6 +66,12 @@
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Parking.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\parkingmodels\parkingmodels.csproj">
+      <Project>{8C21BD68-4FCC-46C7-95E7-06EC089FF401}</Project>
+      <Name>parkingmodels</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
