@@ -29,13 +29,18 @@ namespace databaseservice
             SqlCommand sqlCommand = new SqlCommand(sql, connection);
 
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-            if (sqlDataReader.HasRows)
-            {
-                //записываем
-                for (int i = 0; i < Model.GetType().GetProperties().Length; i++)
-                {
-                    Model.GetType().GetProperties()[i].SetValue(Model, sqlDataReader.GetValue(i));
+            if (sqlDataReader.HasRows) 
 
+            {
+                Debug.WriteLine(sqlDataReader.GetName(0));
+                //записываем
+                while (sqlDataReader.Read())
+                {
+                    for (int i = 0; i < Model.GetType().GetProperties().Length; i++)
+                    {
+                        Model.GetType().GetProperties()[i].SetValue(Model, sqlDataReader.GetValue(i));
+
+                    }
                 }
                 sqlDataReader.Close();
                 return Model;

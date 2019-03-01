@@ -7,6 +7,17 @@ namespace databaseservice.Repositories
 {
     public class DrivingLicenseRepository : IParkingRepository<DrivingLicense>
     {
+        public DrivingLicenseRepository(DataBase db)
+        {
+            this.db = db;
+
+        }
+        private DataBase db;
+        public void Edit(DrivingLicense Model)
+        {
+            string sql = "UPDATE [Водительское удостоверение] SET  ИМЯСТОЛБЦА = ЗНАЧЕНИЕ WHERE УСЛОВИЕ";
+        }
+
         public DataSet GetDataSet(string sql)
         {
             throw new NotImplementedException();
@@ -19,7 +30,8 @@ namespace databaseservice.Repositories
 
         public List<DrivingLicense> GetList(string sql)
         {
-            throw new NotImplementedException();
+            sql = "SELECT * from [Водительское удостоверение]";
+            return null;
         }
 
         public DrivingLicense GetModel()
@@ -30,6 +42,16 @@ namespace databaseservice.Repositories
         public DrivingLicense GetModel(string sql)
         {
             throw new NotImplementedException();
+        }
+
+        public void Insert(DrivingLicense Model)
+        {
+            string sql = $"INSERT INTO [Водительское удостоверение] (Номер_телефона) values ({Model.Id},{Model.Number}) ";
+        }
+
+        public void Remove(DrivingLicense Model)
+        {
+            string sql = "DELETE FROM [Водительское удостоверение] where ";
         }
     }
 

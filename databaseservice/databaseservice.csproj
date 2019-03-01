@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="DataBase.cs" />
+    <Compile Include="DataBaseRepositoryManager.cs" />
     <Compile Include="DataBaseSinglton.cs" />
     <Compile Include="Parking.Designer.cs">
       <AutoGen>True</AutoGen>

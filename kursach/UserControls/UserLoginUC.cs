@@ -16,5 +16,7 @@ namespace kursach.UserControls
         {
             InitializeComponent();
         }
+        public int NumberPhone => int.Parse(this.textBox1.Text);
+        public string Password => this.textBox2.Text;
     }
 }

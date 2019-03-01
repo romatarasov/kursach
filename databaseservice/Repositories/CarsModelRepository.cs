@@ -7,6 +7,17 @@ namespace databaseservice.Repositories
 {
     public class CarsModelRepository : IParkingRepository<CarsModel>
     {
+        public CarsModelRepository(DataBase db)
+        {
+            this.db = db;
+
+        }
+        private DataBase db;
+        public void Edit(CarsModel Model)
+        {
+            string sql = "UPDATE [Модель автомобиля] SET  ИМЯСТОЛБЦА = ЗНАЧЕНИЕ WHERE УСЛОВИЕ";
+        }
+
         public DataSet GetDataSet(string sql)
         {
             throw new NotImplementedException();
@@ -19,7 +30,8 @@ namespace databaseservice.Repositories
 
         public List<CarsModel> GetList(string sql)
         {
-            throw new NotImplementedException();
+            sql = "SELECT * from [Модель автомобиля]";
+            return null;
         }
 
         public CarsModel GetModel()
@@ -30,6 +42,16 @@ namespace databaseservice.Repositories
         public CarsModel GetModel(string sql)
         {
             throw new NotImplementedException();
+        }
+
+        public void Insert(CarsModel Model)
+        {
+            string sql = $"INSERT INTO [Модель автомобиля] (Модель_автомобиля) values ({Model.Id},{Model.Model}) ";
+        }
+
+        public void Remove(CarsModel Model)
+        {
+            string sql = "DELETE FROM [Модель автомобиля] where ";
         }
     }
 

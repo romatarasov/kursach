@@ -1,4 +1,5 @@
-﻿using kursach.Controllers;
+﻿using databaseservice;
+using kursach.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,9 @@ namespace kursach
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);           
             LoginController MainController = new LoginController(new MainForm());
+            DataBaseRepositoryManager dataBaseRepositoryManager = new DataBaseRepositoryManager();
             Application.Run(MainController.CurrentForm);
+           
         }
     }
     

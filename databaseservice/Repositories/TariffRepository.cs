@@ -7,9 +7,21 @@ namespace databaseservice.Repositories
 {
     public class TariffRepository : IParkingRepository<Tariff>
     {
+        public TariffRepository(DataBase db)
+        {
+            this.db = db;
+
+        }
+        private DataBase db;
+        public void Edit(Tariff Model)
+        {
+            string sql = "UPDATE Тариф SET  ИМЯСТОЛБЦА = ЗНАЧЕНИЕ WHERE УСЛОВИЕ";
+        }
+
         public DataSet GetDataSet(string sql)
         {
-            throw new NotImplementedException();
+            sql = "SELECT * from Тариф where";
+            return null;
         }
 
         public List<Tariff> GetList()
@@ -19,7 +31,8 @@ namespace databaseservice.Repositories
 
         public List<Tariff> GetList(string sql)
         {
-            throw new NotImplementedException();
+            sql = "SELECT * from Тариф";
+            return null;
         }
 
         public Tariff GetModel()
@@ -30,6 +43,16 @@ namespace databaseservice.Repositories
         public Tariff GetModel(string sql)
         {
             throw new NotImplementedException();
+        }
+
+        public void Insert(Tariff Model)
+        {
+            string sql = $" INSERT INTO Тариф (Выходной_будни,Размер_Оплаты) VALUES({Model.Day},{Model.Cost})";
+        }
+
+        public void Remove(Tariff Model)
+        {
+            string sql = "DELETE FROM Тариф where ";
         }
     }
 

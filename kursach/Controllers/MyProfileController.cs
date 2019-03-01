@@ -6,7 +6,7 @@ namespace kursach.Controllers
     public class MyProfileController : BaseController<MyProfile>
     {
         
-        protected MyProfileController(MyProfile form) : base(form)
+        public MyProfileController(MyProfile form) : base(form)
         {
 
         }

@@ -10,7 +10,7 @@ namespace kursach.Controllers
         private CarsRepository carsRepository;
         
        
-        protected MyCarsController(MyCars form) : base(form)
+        public MyCarsController(MyCars form) : base(form)
         {
             carsRepository = new CarsRepository();
         }

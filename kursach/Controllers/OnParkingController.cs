@@ -8,7 +8,7 @@ namespace kursach.Controllers
     {
         private SubscriptionRepository substrictionRepository;
 
-        protected OnParkingController(OnParking form) : base(form)
+        public OnParkingController(OnParking form) : base(form)
         {
         }
 

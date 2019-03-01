@@ -6,6 +6,7 @@
         public int Id { get; set; }
         public string Fio { get; set; }
         public int Number { get; set; }
+        public int Balance { get; set; }
         public  DrivingLicense GetNumberDrivingLicense()
         {
             return drivingLicense;

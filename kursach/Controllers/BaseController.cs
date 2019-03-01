@@ -1,4 +1,5 @@
-﻿using kursach.UserControls;
+﻿using kursach.Forms;
+using kursach.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,20 +8,31 @@ using System.Threading.Tasks;
 
 namespace kursach.Controllers
 {
+    /// <summary>
+    /// Базовый контролер который выполняет обработку событий с формы
+    /// 
+    /// </summary>
+    /// <typeparam name="T">Форма для контроллера</typeparam>
     public abstract class BaseController<T>
     {
-       public T CurrentForm { get; set; }
+        /// <summary>
+        /// Форма с которой связан контроллер
+        /// </summary>
+        public T CurrentForm { get; set; }
         protected BaseController(T form)
             {
               this.CurrentForm = form;
             }
+        /// <summary>
+        /// Инициализация данных в контроллере и подписка на события
+        /// </summary>
         public abstract void InitializeController();
         
         
     }
-   public class AdminController : BaseController<AdminControlUC>
+   public class AdminController : BaseController<AdminForm>
     {
-        public AdminController(AdminControlUC form) : base(form)
+        public AdminController(AdminForm form) : base(form)
         {
         }
 
