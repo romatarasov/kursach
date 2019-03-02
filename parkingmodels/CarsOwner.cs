@@ -1,12 +1,24 @@
-﻿namespace parkingmodels
+﻿using System;
+
+namespace parkingmodels
 {
     public class CarsOwner
     {
-        private DrivingLicense drivingLicense; 
+       
         public int Id { get; set; }
         public string Fio { get; set; }
-        public int Number { get; set; }
+        public Nullable<int> Number { get; set; }
+        public Nullable<int> DrivingLicense { get; set; }
         public int Balance { get; set; }
+        private DrivingLicense drivingLicense;
+        public CarsOwner()
+        {
+            Id = 0;
+            Fio = "";
+            Number = 0;
+            DrivingLicense = 0;
+            drivingLicense = new DrivingLicense();
+        }
         public  DrivingLicense GetNumberDrivingLicense()
         {
             return drivingLicense;

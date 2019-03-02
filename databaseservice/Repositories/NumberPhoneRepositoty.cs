@@ -37,12 +37,14 @@ namespace databaseservice.Repositories
 
         public NumberPhone GetModel()
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         public NumberPhone GetModel(string sql)
         {
-            throw new NotImplementedException();
+            return db.GetModel<NumberPhone>(sql);
+
+
         }
 
         public void Insert(NumberPhone Model)

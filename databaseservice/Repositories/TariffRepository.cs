@@ -42,7 +42,7 @@ namespace databaseservice.Repositories
 
         public Tariff GetModel(string sql)
         {
-            throw new NotImplementedException();
+            return db.GetModel<Tariff>(sql);
         }
 
         public void Insert(Tariff Model)

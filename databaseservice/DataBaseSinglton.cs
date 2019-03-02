@@ -5,7 +5,7 @@
         private static DataBase database;
         public static DataBase GetDataBase()
         {
-            if (database != null)
+            if (database == null)
             {
                 database = new DataBase();
             }

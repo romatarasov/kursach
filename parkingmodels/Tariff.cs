@@ -1,8 +1,18 @@
-﻿namespace parkingmodels
+﻿using System;
+
+namespace parkingmodels
 {
     public class Tariff
     {
-        public bool Day { get; set; }
+        public Nullable<bool> Day { get; set; }
         public int Cost { get; set; }
+       
+        public Tariff()
+        {
+            Day =null;
+            Cost = 0;          
+          
+        }
+     
     }
 }

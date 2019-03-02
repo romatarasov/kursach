@@ -51,11 +51,35 @@
     <Compile Include="Controllers\MyProfileController.cs" />
     <Compile Include="Controllers\OnParkingController.cs" />
     <Compile Include="Controllers\UserFormController.cs" />
+    <Compile Include="Forms\AddCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCarForm.Designer.cs">
+      <DependentUpon>AddCarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangeCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangeCarForm.Designer.cs">
+      <DependentUpon>ChangeCarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangeCarsOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangeCarsOwner.Designer.cs">
+      <DependentUpon>ChangeCarsOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangeProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangeProfileForm.Designer.cs">
+      <DependentUpon>ChangeProfileForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserForm.cs">
       <SubType>Form</SubType>
@@ -107,8 +131,14 @@
     <Compile Include="UserControls\UserLoginUC.Designer.cs">
       <DependentUpon>UserLoginUC.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AddCarForm.resx">
+      <DependentUpon>AddCarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangeCarsOwner.resx">
+      <DependentUpon>ChangeCarsOwner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>

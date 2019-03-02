@@ -6,6 +6,9 @@ using parkingmodels;
 
 namespace kursach.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class UserFormController : BaseController<UserForm>
     {
         private CarsOwner carsOwner;
@@ -15,10 +18,14 @@ namespace kursach.Controllers
         public UserFormController(UserForm form) : base(form)
         {
             InitializeController();
+            //todo реализовать контроллер
             carsController = new MyCarsController(new MyCars());
+            //todo реализовать контроллер
+
             myProfileController = new MyProfileController(new MyProfile());
+            //todo реализовать контроллер
+
             onParkingController = new OnParkingController(new OnParking());
-            
 
         }
 

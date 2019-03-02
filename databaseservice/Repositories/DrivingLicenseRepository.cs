@@ -41,7 +41,7 @@ namespace databaseservice.Repositories
 
         public DrivingLicense GetModel(string sql)
         {
-            throw new NotImplementedException();
+            return db.GetModel<DrivingLicense>(sql);
         }
 
         public void Insert(DrivingLicense Model)

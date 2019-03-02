@@ -15,6 +15,8 @@ namespace kursach.UserControls
         public OnParking()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
+
         }
     }
 }

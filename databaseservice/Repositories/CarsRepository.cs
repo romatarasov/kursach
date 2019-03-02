@@ -45,7 +45,7 @@ namespace databaseservice.Repositories
 
         public Cars GetModel(string sql)
         {
-            throw new NotImplementedException();
+             return db.GetModel<Cars>(sql);
         }
 
         public void Insert(Cars Model)

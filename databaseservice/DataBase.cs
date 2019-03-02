@@ -38,7 +38,8 @@ namespace databaseservice
                 {
                     for (int i = 0; i < Model.GetType().GetProperties().Length; i++)
                     {
-                        Model.GetType().GetProperties()[i].SetValue(Model, sqlDataReader.GetValue(i));
+                        if(sqlDataReader.GetValue(i).GetType()!=typeof(DBNull))
+                            Model.GetType().GetProperties()[i].SetValue(Model, sqlDataReader.GetValue(i));
 
                     }
                 }

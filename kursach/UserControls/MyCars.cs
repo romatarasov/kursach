@@ -17,6 +17,7 @@ namespace kursach.UserControls
         public MyCars()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
 
         public void SetDataSource(List <Cars> Cars)

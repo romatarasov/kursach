@@ -42,7 +42,7 @@ namespace databaseservice.Repositories
 
         public Payment GetModel(string sql)
         {
-            throw new NotImplementedException();
+            return db.GetModel<Payment>(sql);
         }
 
         public void Insert(Payment Model)

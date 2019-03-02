@@ -3,6 +3,7 @@ using kursach.UserControls;
 using parkingmodels;
 using System;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace kursach.Controllers
 {
@@ -20,8 +21,10 @@ namespace kursach.Controllers
         {
             InitializeController();
 
-                      
-      
+            adminogin = new AdminControlUC();
+
+            userLogin = new UserLoginUC();
+            CurrentForm.Bind(userLogin);
         }
 
         public override void InitializeController( )
@@ -38,15 +41,23 @@ namespace kursach.Controllers
             {
                 adminController = new AdminController(new Forms.AdminForm());
                 adminController.CurrentForm.Show();
+                CurrentForm.Hide();
             }
             else
             {
-
-                CarsOwner carsOwner = DataBaseRepositoryManager.GetCarsOwnerRepository().GetModel($"SELECT * FROM [Владелец авто] where Номер_телефона={userLogin.NumberPhone}");
+                NumberPhone phone = DataBaseRepositoryManager.GetNumberPhoneRepository().GetModel($"SELECT * FROM [Номер телефона] WHERE [Номер_телефона]={userLogin.NumberPhone}");
+                CarsOwner carsOwner = DataBaseRepositoryManager.GetCarsOwnerRepository().GetModel($"SELECT * FROM [Владелец авто] where [Номер_телефона]={phone.Id}"); 
                 if (carsOwner!=null)
                 {
                     userForm = new UserFormController(new Forms.UserForm());
+                    userForm.Bind(carsOwner);
                     userForm.CurrentForm.Show();
+                    
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Данного пользователя не существует");
                 }
             }
             
@@ -56,15 +67,15 @@ namespace kursach.Controllers
 
         private void OnSelectAdmin(object sender, EventArgs e)
         {
-            AdminControlUC adminogin = new AdminControlUC();
+            CurrentForm.Bind(adminogin);
             isAdminSelected = true;
 
         }
 
         private void OnSelectUser(object sender, EventArgs e)
         {
-            UserLoginUC userLogin = new UserLoginUC();
             isAdminSelected = false;
+            CurrentForm.Bind(userLogin);
             
 
         }

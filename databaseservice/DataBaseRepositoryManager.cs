@@ -9,12 +9,12 @@ namespace databaseservice
 {
    public class DataBaseRepositoryManager
     {
-        private static DataBase dataBase;
+        public static DataBase dataBase => DataBaseSinglton.GetDataBase();
         public DataBaseRepositoryManager()
         {
-            dataBase = DataBaseSinglton.GetDataBase();
-
+          
         }
+        
         public static CarsBrandRepository GetCarsBrandRepository()
         {
             CarsBrandRepository carsBrandRepository = new CarsBrandRepository(dataBase);

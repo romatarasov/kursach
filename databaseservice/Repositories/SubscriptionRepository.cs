@@ -20,6 +20,7 @@ namespace databaseservice.Repositories
 
         public DataSet GetDataSet(string sql)
         {
+           
             sql = "SELECT * from Абонемент where";
             return null;
         }
@@ -39,10 +40,10 @@ namespace databaseservice.Repositories
         {
             throw new NotImplementedException();
         }
-
+     
         public Subscription GetModel(string sql)
         {
-            throw new NotImplementedException();
+            return db.GetModel<Subscription>(sql);
         }
 
         public void Insert(Subscription Model)
