@@ -31,9 +31,9 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.Addbutton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Addbutton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -62,7 +62,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(527, 256);
+            this.dataGridView1.Size = new System.Drawing.Size(527, 255);
             this.dataGridView1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -75,38 +75,12 @@
             this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.Addbutton, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 265);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 264);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(527, 47);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(527, 48);
             this.tableLayoutPanel2.TabIndex = 1;
-            // 
-            // Addbutton
-            // 
-            this.Addbutton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Addbutton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Addbutton.ForeColor = System.Drawing.SystemColors.Control;
-            this.Addbutton.Location = new System.Drawing.Point(3, 11);
-            this.Addbutton.Name = "Addbutton";
-            this.Addbutton.Size = new System.Drawing.Size(166, 33);
-            this.Addbutton.TabIndex = 18;
-            this.Addbutton.Text = "Добавить";
-            this.Addbutton.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(175, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 33);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Удалить";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -114,12 +88,40 @@
             this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(347, 11);
+            this.button2.Location = new System.Drawing.Point(347, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(177, 33);
             this.button2.TabIndex = 20;
             this.button2.Text = "Изменить";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(175, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(166, 33);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Удалить";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // Addbutton
+            // 
+            this.Addbutton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Addbutton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Addbutton.ForeColor = System.Drawing.SystemColors.Control;
+            this.Addbutton.Location = new System.Drawing.Point(3, 12);
+            this.Addbutton.Name = "Addbutton";
+            this.Addbutton.Size = new System.Drawing.Size(166, 33);
+            this.Addbutton.TabIndex = 18;
+            this.Addbutton.Text = "Добавить";
+            this.Addbutton.UseVisualStyleBackColor = false;
+            this.Addbutton.Click += new System.EventHandler(this.Addbutton_Click);
             // 
             // MyCars
             // 
@@ -127,7 +129,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MyCars";
-            this.Size = new System.Drawing.Size(539, 321);
+            this.Size = new System.Drawing.Size(534, 321);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);

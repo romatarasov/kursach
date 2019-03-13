@@ -1,6 +1,4 @@
-﻿using kursach.Forms;
-using kursach.UserControls;
-using System;
+﻿using kursach.UserControls;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,16 +28,5 @@ namespace kursach.Controllers
         
         
     }
-   public class AdminController : BaseController<AdminForm>
-    {
-        public AdminController(AdminForm form) : base(form)
-        {
-        }
-
-        public override void InitializeController()
-        {
-            throw new NotImplementedException();
-        }
-    }
-
+    
 }

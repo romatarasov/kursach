@@ -13,6 +13,8 @@ namespace kursach.UserControls
 {
     public partial class MyCars : UserControl
     {
+        public event EventHandler SelectChangeCar;
+        public event EventHandler SelectAddCar;
         
         public MyCars()
         {
@@ -23,6 +25,16 @@ namespace kursach.UserControls
         public void SetDataSource(List <Cars> Cars)
         {
             this.dataGridView1.DataSource = Cars;
+        }
+
+        private void Addbutton_Click(object sender, EventArgs e)
+        {
+            SelectAddCar(this, e);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SelectChangeCar(this, e);
         }
     }
 }
