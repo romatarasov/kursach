@@ -14,7 +14,7 @@ namespace parkingmodels
         public CarsOwner()
         {
             Id = 0;
-            Fio = "";
+            Fio = "Hjsdcsdcsd reger";
             Number = 0;
             DrivingLicense = 0;
             drivingLicense = new DrivingLicense();

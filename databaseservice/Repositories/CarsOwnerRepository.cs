@@ -15,7 +15,8 @@ namespace databaseservice.Repositories
         private DataBase db;
         public void Edit(CarsOwner Model)
         {
-            string sql = "UPDATE [Владелец авто] SET  ИМЯСТОЛБЦА = ЗНАЧЕНИЕ WHERE УСЛОВИЕ";
+            string sql = $"UPDATE [Владелец авто] SET [ФИО]={Model.Fio} , [Водительское_удостоверение]={Model.DrivingLicense}, [Номер_телефона]={Model.Number}";
+
         }
 
         public DataSet GetDataSet(string sql)

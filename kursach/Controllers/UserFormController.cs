@@ -18,12 +18,12 @@ namespace kursach.Controllers
         public UserFormController(UserForm form) : base(form)
         {
             InitializeController();
-            //todo реализовать контроллер
+            //todo реализовать контроллер Mycars
             carsController = new MyCarsController(new MyCars());
-            //todo реализовать контроллер
+            //todo реализовать контроллер Myprofile
 
             myProfileController = new MyProfileController(new MyProfile());
-            //todo реализовать контроллер
+            //todo реализовать контроллер OnParking
 
             onParkingController = new OnParkingController(new OnParking());
 

@@ -25,6 +25,7 @@ namespace kursach.Controllers
 
             userLogin = new UserLoginUC();
             CurrentForm.Bind(userLogin);
+            
         }
 
         public override void InitializeController( )

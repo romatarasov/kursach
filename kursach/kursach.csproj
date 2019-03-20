@@ -78,12 +78,6 @@
     <Compile Include="Forms\ChangeCarsOwner.Designer.cs">
       <DependentUpon>ChangeCarsOwner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ChangeProfileForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ChangeProfileForm.Designer.cs">
-      <DependentUpon>ChangeProfileForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>

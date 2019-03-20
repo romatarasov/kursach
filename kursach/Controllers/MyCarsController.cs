@@ -15,8 +15,9 @@ namespace kursach.Controllers
         private ChangeCarController changeCarController;
         private AddCarController addCarController;
         private ChangeCarForm changeCar;
+        private UserLoginUC userLogin;
         private MyCars myCars;
-        bool isSelectedChange,isSelectedAdd;
+        bool isSelectedChange=false,isSelectedAdd=false;
        
         public MyCarsController(MyCars form) : base(form)
         {
@@ -33,6 +34,7 @@ namespace kursach.Controllers
         }
         public void MyCars(object sender,EventArgs e)
         {
+
             if (isSelectedChange)
             {
                 changeCarController = new ChangeCarController(new Forms.ChangeCarForm());
@@ -48,14 +50,16 @@ namespace kursach.Controllers
             }
             else
             {
-
-                CarsOwner carsowner = DataBaseRepositoryManager.GetCarsOwnerRepository().GetModel($"SELECT * FROM [Владелец авто] WHERE []={}");
-                Cars cars = DataBaseRepositoryManager.GetCarsRepository().GetList($"SELECT * FROM [Автомобили] where [Владелец_авто]={.Id}");
+             
+                NumberPhone phone = DataBaseRepositoryManager.GetNumberPhoneRepository().GetModel($"SELECT * FROM [Номер телефона] WHERE [Номер_телефона]={userLogin.NumberPhone}");
+                CarsOwner carsOwner = DataBaseRepositoryManager.GetCarsOwnerRepository().GetModel($"SELECT * FROM [Владелец авто] where [Номер_телефона]={phone.Id}");
+                Cars cars = DataBaseRepositoryManager.GetCarsRepository().GetModel($"SELECT * FROM [Автомобили] where [Владелец_авто]={carsOwner.Id}");
 
                 if (cars != null)
                 {
                     myCars = new MyCars();
-                    
+             
+                    ///хз
 
 
                 }

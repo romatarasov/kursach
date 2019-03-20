@@ -24,7 +24,7 @@ namespace kursach
             this.groupBox1.Controls.Add(new UserLoginUC());
             
     }
-   public     void Bind(UserControl control)
+         public  void Bind(UserControl control)
         {
             groupBox1.Controls.Clear();
             groupBox1.Controls.Add(control);

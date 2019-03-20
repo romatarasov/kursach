@@ -10,7 +10,7 @@ namespace parkingmodels
    
         public int Id { get; set; }
         public string CarModel { get; set; }
-        public int CarBrand { get; set; }
+        public string CarBrand { get; set; }
         public string NumberCar { get; set; }
         public Nullable<bool> OnParking { get; set; }
         public int CarOwner { get; set; }
@@ -19,7 +19,7 @@ namespace parkingmodels
         {
             Id = 0;
             CarModel = "";
-            CarBrand = 0;
+            CarBrand = "";
             NumberCar = "";
             OnParking = null;
             CarOwner = 0;
